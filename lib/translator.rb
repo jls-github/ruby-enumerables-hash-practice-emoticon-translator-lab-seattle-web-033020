@@ -1,6 +1,5 @@
 # require modules here
 require "yaml"
-require_relative "../"
 
 def load_library(library)
   # code goes here
@@ -9,6 +8,7 @@ def load_library(library)
   emoticon_library.each do |meaning|
     hash[:get_meaning][meaning] = meaning[0]
     hash[:get_emoticon][meaning] = meaning[1]
+  end
 end
 
 def get_japanese_emoticon
