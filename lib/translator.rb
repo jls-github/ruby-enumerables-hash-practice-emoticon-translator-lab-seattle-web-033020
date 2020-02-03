@@ -3,8 +3,8 @@ require "yaml"
 
 def load_library(library)
   # code goes here
-  hash = YAML.load_file(library)
-  hash = {:get_meaning => {}, :get_emoticon => {}}
+  emoticon_library = YAML.load_file(library)
+  hash = {:get_meaning => {emoticon_library}, :get_emoticon => {}}
 end
 
 def get_japanese_emoticon
