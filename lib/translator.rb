@@ -9,6 +9,7 @@ def load_library(library)
     hash[:get_meaning][meaning] = meaning[0]
     hash[:get_emoticon][meaning] = meaning[1]
   end
+  hash
 end
 
 def get_japanese_emoticon
