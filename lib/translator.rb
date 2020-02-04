@@ -18,7 +18,7 @@ def get_japanese_emoticon(library, emoticon)
   emoticon_library.each do |meaning, meaning_values|
     hash[meaning_values[0]] = meaning_values[1]
   end
-  hash
+  hash[emoticon]
   # code goes here
 end
 
