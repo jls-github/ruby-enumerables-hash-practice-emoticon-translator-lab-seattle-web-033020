@@ -22,6 +22,12 @@ def get_japanese_emoticon(library, emoticon)
   # code goes here
 end
 
-def get_english_meaning
+def get_english_meaning(library, emoticon)
   # code goes here
+  hash = load_library(library)
+  if hash[:get_meaning].include?(emoticon)
+    return hash[:get_meaning][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
