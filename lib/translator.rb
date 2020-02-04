@@ -9,7 +9,7 @@ def load_library(library)
 #    if hash[:get_meaning] == {}
 #      hash[:get_meaning] = {meaning_values => meaning}
 #    else
-    hash[:get_meaning][meaning_values] = meaning[]
+    hash[:get_meaning][meaning_values[1]] = meaning
   end
   hash
 end
