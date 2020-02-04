@@ -14,7 +14,11 @@ end
 
 def get_japanese_emoticon(library, emoticon)
   hash = load_library(library)
-  hash[:get_emoticon].include?(emoticon) ? return hash[:get_emoticon][emoticon] : return "Sorry, that emoticon was not found"
+  if hash[:get_emoticon].include?(emoticon)
+    return hash[:get_emoticon][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
   # code goes here
 end
 
