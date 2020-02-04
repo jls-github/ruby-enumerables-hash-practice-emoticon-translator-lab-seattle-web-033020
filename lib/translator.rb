@@ -12,7 +12,11 @@ def load_library(library)
   hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(library, emoticon)
+  emoticon_library = YAML.load_file(library)
+  hash = {}
+  emoticon_library.each do |meaning, meaning_values|
+    hash[meaning_values[0]] = meaning_values[1]
   # code goes here
 end
 
