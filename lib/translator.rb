@@ -13,12 +13,8 @@ def load_library(library)
 end
 
 def get_japanese_emoticon(library, emoticon)
-  emoticon_library = YAML.load_file(library)
-  hash = {}
-  emoticon_library.each do |meaning, meaning_values|
-    hash[meaning_values[0]] = meaning_values[1]
-  end
-  hash[emoticon]
+  hash = load_library(library)
+  hash[:get_emoticon].include?(emoticon) ? return hash[:get_emoticon][emoticon] : return "Sorry, that emoticon was not found"
   # code goes here
 end
 
